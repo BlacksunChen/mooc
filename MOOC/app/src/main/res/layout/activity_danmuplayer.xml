@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_danmuplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/danmakuView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_danmuOpt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            >
+
+            <EditText
+                android:id="@+id/et_danmu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Send" />
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Close" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_timeOpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/layout_danmuOpt"
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/time_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"/>
+
+            <SeekBar
+                android:id="@+id/sb_player"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/time_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@id/layout_timeOpt"
+            android:layout_alignRight="@id/layout_timeOpt"
+            android:text="play"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
