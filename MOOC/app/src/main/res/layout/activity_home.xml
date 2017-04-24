@@ -22,7 +22,7 @@
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="btn1"/>
+                android:text="计算机"/>
             <Button 
                 android:layout_height="60dp"
                 android:layout_width="0dp"
