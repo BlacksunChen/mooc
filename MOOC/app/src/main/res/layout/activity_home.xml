@@ -1,69 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     android:orientation="vertical" >
-    
-    <TextView 
-        android:layout_height="120dp"
-        android:layout_width="fill_parent"
-        android:background="#cccccc"
-        android:text="banner!"/>
-    
-    <LinearLayout 
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout 
-            android:layout_width="fill_parent"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/ll_point"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@id/viewPager"
+                android:orientation="horizontal"></LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="计算机"/>
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
-        </LinearLayout>
-        <LinearLayout 
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
-            <Button 
-                android:layout_height="60dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="btn1"/>
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#eee"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/themeColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:text="学科分类"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_computer"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg1"
+                        android:src="@mipmap/subject_computer"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="计 算 机"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_engineer"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg2"
+                        android:src="@mipmap/subject_engineer"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="工 科"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_science"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg3"
+                        android:src="@mipmap/subject_science"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="理 科"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_finance"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg4"
+                        android:src="@mipmap/subject_finance"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="经 济 学"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_health"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg3"
+                        android:src="@mipmap/subject_health"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="健 康"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_language"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg1"
+                        android:src="@mipmap/subject_language"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="语 言"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_literature"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg4"
+                        android:src="@mipmap/subject_literature"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="人 文"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_other"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/subject_btn_bg2"
+                        android:src="@mipmap/subject_other"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="其 他"
+                        android:textColor="#000"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/themeColor"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:text="课程推荐"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/banner_introclass1"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/banner_introclass1"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnTest"
             android:layout_width="wrap_content"
@@ -71,4 +289,4 @@
             android:text="test!!!"/>
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

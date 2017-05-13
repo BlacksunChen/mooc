@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="cmr.mooc.Mycourse_noticeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="各位同学：\n　　我是本学期这门课程的助教，在课程期间如果有任何问题可以发送邮件至2836408878@qq.com\n　　欢迎大家积极在讨论区进行讨论，我会及时回复大家的问题。\n　　祝大家学习愉快！" />
+
+</FrameLayout>

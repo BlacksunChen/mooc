@@ -77,44 +77,53 @@ public class MainActivity extends Activity implements OnClickListener{
         // 开启事务
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         // 隐藏所有Fragment
-        hideFragment(transaction);
+        //hideFragment(transaction);
 
         switch(index)
         {
             case 0:
                 tv_home.setTextColor(getResources().getColor(R.color.btn_text_on));
+                iv_home.setImageResource(R.mipmap.bottom_home_on);
                 if(homeFragment == null)
                 {
                     homeFragment = new HomeFragment();
-                    transaction.add(R.id.fl_content,homeFragment);
+                    //transaction.add(R.id.fl_content,homeFragment);
+                    transaction.replace(R.id.fl_content,homeFragment);
                 }
                 else
                 {
-                    transaction.show(homeFragment);
+                    //transaction.show(homeFragment);
+                    transaction.replace(R.id.fl_content,homeFragment);
                 }
                 break;
             case 1:
                 tv_course.setTextColor(getResources().getColor(R.color.btn_text_on));
+                iv_course.setImageResource(R.mipmap.bottom_course_on);
                 if(courseFragment == null)
                 {
                     courseFragment = new CourseFragment();
-                    transaction.add(R.id.fl_content,courseFragment);
+                    //transaction.add(R.id.fl_content,courseFragment);
+                    transaction.replace(R.id.fl_content,courseFragment);
                 }
                 else
                 {
-                    transaction.show(courseFragment);
+                    //transaction.show(courseFragment);
+                    transaction.replace(R.id.fl_content,courseFragment);
                 }
                 break;
             case 2:
                 tv_user.setTextColor(getResources().getColor(R.color.btn_text_on));
+                iv_user.setImageResource(R.mipmap.bottom_user_on);
                 if(userFragment == null)
                 {
                     userFragment = new UserFragment();
-                    transaction.add(R.id.fl_content,userFragment);
+                    //transaction.add(R.id.fl_content,userFragment);
+                    transaction.replace(R.id.fl_content,userFragment);
                 }
                 else
                 {
-                    transaction.show(userFragment);
+                    //transaction.show(userFragment);
+                    transaction.replace(R.id.fl_content,userFragment);
                 }
                 break;
             default:
@@ -176,6 +185,10 @@ public class MainActivity extends Activity implements OnClickListener{
         tv_home.setTextColor(getResources().getColor(R.color.btn_text));
         tv_course.setTextColor(getResources().getColor(R.color.btn_text));
         tv_user.setTextColor(getResources().getColor(R.color.btn_text));
+
+        iv_home.setImageResource(R.mipmap.bottom_home);
+        iv_course.setImageResource(R.mipmap.bottom_course);
+        iv_user.setImageResource(R.mipmap.bottom_user);
     }
 
 

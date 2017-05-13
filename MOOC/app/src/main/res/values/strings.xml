@@ -14,4 +14,17 @@
     <string name="register_hint_user">5-30位字符</string>
     <string name="register_password">输入密码</string>
     <string name="register_passwordAgain">确认密码</string>
+    
+    <string name="bottom_btn_home">首页</string>
+    <string name="bottom_btn_course">课程</string>
+    <string name="bottom_btn_user">用户</string>
+
+    <string name="mycourse_notice">公告</string>
+    <string name="mycourse_chapter">章节</string>
+    <string name="mycourse_discuss">讨论</string>
+
+    <string name="test_str">Spring是为解决企业应用程序开发复杂性而创建的一个Java开源框架，应用非常广泛。业内非常流行的SSH架构中的其中一个"S"指的就是Spring。本门课程作为Spring的入门级课程，将结合实例为您带来依赖注入、IOC和AOP的基本概念及用法，为后续高级课程的学习打下基础。</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
